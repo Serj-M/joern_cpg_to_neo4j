@@ -1,7 +1,7 @@
 from cpg_to_neo4j import cpgToNeo4j
 import yaml
 
-with open("config.yaml", "r") as f:
+with open("config.yml", "r") as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
 
 
