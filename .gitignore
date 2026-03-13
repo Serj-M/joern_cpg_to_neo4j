@@ -1,5 +1,6 @@
 # Local config (should not be committed)
 config.yml
+outdir/
 
 # Virtual environments
 .venv/
