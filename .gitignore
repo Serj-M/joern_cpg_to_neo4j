@@ -1,6 +1,7 @@
 # Local config (should not be committed)
 config.yml
 outdir/
+queries.cypher
 
 # Virtual environments
 .venv/

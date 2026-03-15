@@ -52,3 +52,6 @@ neo4j
 --relationships=import/edges_CDG_header.csv,import/edges_CDG_data.csv
 --relationships=import/edges_CFG_header.csv,import/edges_CFG_data.csv
 --relationships=import/edges_TAGGED_BY_header.csv,import/edges_TAGGED_BY_data.csv
+--relationships=import/edges_DOMINATE_header.csv,import/edges_DOMINATE_data.csv
+--relationships=import/edges_POST_DOMINATE_header.csv,import/edges_POST_DOMINATE_data.csv
+--relationships=import/edges_REACHING_DEF_header.csv,import/edges_REACHING_DEF_data.csv
