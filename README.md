@@ -1,7 +1,7 @@
 # Joern CPG to Neo4j
 
 This repository contains code to import CPG extracted from Joern (neo4jcsv format) into Neo4j.
-Install Joern/CPG (https://github.com/joernio/joern) -> `joern-parse /src/directory` -> `joern-export --out /app/outdir_all --repr=all --format=neo4jcsv` (https://docs.joern.io/export/)
+First, install Joern/CPG (https://github.com/joernio/joern) -> `joern-parse /src/directory` -> `joern-export --out /app/outdir_all --repr=all --format=neo4jcsv` (https://docs.joern.io/export/)
 
 **Note**: Please refer to the [Joern documentation](https://docs.joern.io) for more information on how to use Joern.
 
