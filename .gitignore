@@ -2,6 +2,7 @@
 config.yml
 outdir/
 queries.cypher
+import_order.yml
 
 # Virtual environments
 .venv/
