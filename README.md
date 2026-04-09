@@ -6,17 +6,24 @@ This repository contains code to import CPG extracted from Joern (neo4jcsv forma
 
 ## Usage
 
-1. Modify the `config.py` file to set the path to the csv files and the Neo4j database information.
+1. Use Python 3.10 or newer, then create and activate a virtual environment:
+   `python3 -m venv .venv`
+   `source .venv/bin/activate`
 
-2. Start your Neo4j database.
+2. Install dependencies from `requirements.txt`:
+   `pip install -r requirements.txt`
 
-3. Run the `main.py` file to import the CPG into Neo4j.
+3. Create `config.py` based on `config_example.yml`, then update it with the path to the csv files and the Neo4j database information.
+
+4. Start your Neo4j database.
+
+5. Run the `main.py` file to import the CPG into Neo4j.
 
 ## Alt usage
 
 If you're importing nodes and edges from a large project, importing via Cypher, as suggested by Joern, can be very slow. For a significant speedup, you can use the Neo4j data import instructions - https://neo4j.com/docs/operations-manual/current/import/#import-tool-examples .
 
-Modify the import parameters in the file `import_args.txt` and run the command `HEAP_SIZE=3G ./bin/neo4j-admin @import_args.txt` (the database must be stopped while the command is running) in the directory `/home/serj/.config/neo4j-desktop/Application/Data/dbmss/dbms-fb8e0921-28fd-4ce9-8bee-1e7862e47bf1`
+Modify the import parameters in the file `import_args.txt` and run the command `HEAP_SIZE=3G ./bin/neo4j-admin @import_args.txt` (the database must be stopped while the command is running) in the directory with your Neo4j database `/home/serj/.config/neo4j-desktop/Application/Data/dbmss/dbms-fb8e0921-28fd-4ce9-8bee-1e7862e47bf1`
 
 ## Dependencies
 
