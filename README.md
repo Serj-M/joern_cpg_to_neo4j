@@ -9,10 +9,13 @@ run in docker -> `joern-parse /src/directory` -> `joern-export --out /app/outdir
 ## Usage
 
 1. Use Python 3.10 or newer, then create and activate a virtual environment:
+   
    `python3 -m venv .venv`
+
    `source .venv/bin/activate`
 
 2. Install dependencies from `requirements.txt`:
+   
    `pip install -r requirements.txt`
 
 3. Create `config.py` based on `config_example.yml`, then update it with the path to the csv files and the Neo4j database information.
