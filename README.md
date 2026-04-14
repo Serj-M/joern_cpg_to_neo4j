@@ -18,7 +18,7 @@ First, install Joern/CPG (https://github.com/joernio/joern) -> `joern-parse /src
    
    `pip install -r requirements.txt`
 
-3. Create `config.py` based on `config_example.yml`, then update it with the path to the csv files and the Neo4j database information.
+3. Create `config.yml` based on `config_example.yml`, then update it with the path to the csv files and the Neo4j database information.
 
 4. Start your Neo4j database.
 
@@ -28,7 +28,11 @@ First, install Joern/CPG (https://github.com/joernio/joern) -> `joern-parse /src
 
 If you're importing nodes and edges from a large project, importing via Cypher, as suggested by Joern, can be very slow. For a significant speedup, you can use the Neo4j data import instructions - https://neo4j.com/docs/operations-manual/current/import/#import-tool-examples .
 
-Modify the import parameters in the file `import_args.txt` and run the command `HEAP_SIZE=3G ./bin/neo4j-admin @import_args.txt` (the database must be stopped while the command is running) in the directory with your Neo4j database `/home/user/.config/neo4j-desktop/Application/Data/dbmss/dbms-fb8e0921-28fd-4ce9-8bee-1e7862e47bf1` (for linux). First, move all the CSS files to import/ in the specified directory (or specify the current path to the CSS files in the `import_args.txt` file).
+1. If necessary, modify the import parameters, as well as the nodes and edges, in the `import_args.txt` file. (The file specifies nodes and edges for Joern/CPG 2.0.1, and you may need to add/remove entries if Joern exports other types.)
+   
+2. In the directory with your Neo4j database (example directory for Linux: `/home/user/.config/neo4j-desktop/Application/Data/dbmss/dbms-fb8e0921-28fd-4ce9-8bee-1e7862e47bf1`), create the `import/` folder and move all the CSV files into it (or change the path to the CSV files in the `import_args.txt` file).
+   
+3. Run the command `HEAP_SIZE=3G ./bin/neo4j-admin @import_args.txt` in the directory with your Neo4j database. (The database must be stopped while executing the command.)
 
 ## Dependencies
 
